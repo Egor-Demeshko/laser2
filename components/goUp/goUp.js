@@ -8,15 +8,10 @@ export function goUpButton(){
   return element;
 
   function setupElement(){
-<<<<<<< HEAD
     const route = document.body.dataset.laserroute;
 
     element.innerHTML = `<svg aria-label="hidden">
                            <use href="${route}/assets/icons/icons.svg#arrow"></use>
-=======
-    element.innerHTML = `<svg aria-label="hidden">
-                           <use href="/assets/icons/icons.svg#arrow"></use>
->>>>>>> 45a897c2fef4ebf229df8eb4c035651cf272c50e
                          </svg>`;
   }
 

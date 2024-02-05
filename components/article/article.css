@@ -40,11 +40,7 @@ article h4{
 
 @media(min-width: 52em){
   article{
-<<<<<<< HEAD
     padding: 0 5em 1em;
-=======
-    padding: 0 5em 1em 1em;
->>>>>>> 45a897c2fef4ebf229df8eb4c035651cf272c50e
   }
 }
 

@@ -102,7 +102,7 @@ import { ErrorMessageElement } from "../message/message.js";
 
 
   async function sendData(data){
-    return await fetch("mail.php", {
+    return await fetch(`/mail.php`, {
                                        method: "POST",
                                        body: data
                                      });

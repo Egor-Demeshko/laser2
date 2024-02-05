@@ -26,7 +26,7 @@ $email = $_POST["email"];
 $phone = $_POST["phone"];
 $request = $_POST["request"];
 
-$email_template = get_theme_root_uri() . "/components/templates/mail.html";
+$email_template = get_theme_root_uri() . "/laser/components/templates/mail.html";
 $body = file_get_contents($email_template);
 
 
