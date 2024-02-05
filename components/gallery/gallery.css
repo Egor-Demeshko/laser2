@@ -1,0 +1,153 @@
+:root{
+  --card-border-radius: 10px;
+}
+
+.gallery{
+  border-radius: var(--card-border-radius);
+  position: relative;
+  max-width: 1000px;
+  max-inline-size: 1000px;
+  padding: 0 14px;
+}
+
+.gallery__images::-webkit-scrollbar{
+  display: none;
+}
+
+
+.gallery__carousel{
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  border-radius: var(--card-border-radius);
+}
+
+
+/* *_*_*_* галерея *_*_*_* */
+.gallery__images{
+  display: flex;
+  transition: transform 600ms ease;
+}
+
+.gallery__image{
+  flex: 1;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.gallery__image_100vw{
+  width: 100vw;
+  border-radius: 0;
+}
+
+.gallery__arrows{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.gallery__arrow{
+  color: var(--red);
+  width: 35px;
+  height: 71px;
+  filter: drop-shadow(0 0 10px var(--white));
+}
+
+.gallery__arrow-wrapper{
+  padding: 10px 0 10px 10px;
+}
+
+/*   *_*_*_* photo progress bar _*_*_*_ */
+.gallery__navigation_progress{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  gap: 8px;
+  bottom: 18px;
+  padding: 2px 9px;
+  background-color: transparent;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery__progress_element{
+  flex: 1 1;
+  box-sizing: border-box;
+  max-width: 50px;
+  padding: 3px 19px;
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: var(--white);
+}
+
+.gallery__progress_element-active{
+    background-color: var(--red);
+    transition: background 400ms ease;
+}
+
+
+@media (min-width: 52em){
+  :root{
+    --card-border-radius: 0;
+  }
+
+  .gallery{
+    width: 100%;
+    max-inline-size: 100%;
+    padding: 0;
+  }
+
+  .gallery__carousel{
+
+  }
+
+  .gallery__images{
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.1rem;
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+
+  .gallery__image{
+    display: block;
+    height: 24vh;
+    height: clamp(1em, 24vh, 51em);
+  }
+
+  .gallery::before{
+    content: "";
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    top: calc(var(--main-top-spacing) - calc(var(--gallery-pseudo)));
+    width: 100%;
+    height: var(--pseudo-size)
+  }
+
+  .gallery::after{
+    content: "";
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: calc(calc(var(--gallery-pseudo)) * (-1));
+    width: 100%;
+    height: var(--pseudo-size);
+  }
+
+  .gallery__arrows{
+    display: none;
+  }
+
+  .gallery__navigation_progress{
+    display: none;
+  }
+}

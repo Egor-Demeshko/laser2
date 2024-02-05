@@ -1,0 +1,155 @@
+header{
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--bar-height);
+  width: 100vw;
+  background: var(--top-gradient);
+  padding: 24px 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+
+header>div{
+  display: block;
+  height: 100%;
+}
+
+header img{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 128px;
+}
+
+header>nav,
+header>a,
+header>address{
+  display: none;
+}
+
+details>summary{
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media(min-width: 32em){
+  header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: var(--bar-height);
+    font-size: 0.8em;
+    font-weight: bold;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    background: var(--black);
+    padding: 0;
+  }
+
+  header>nav,
+  header>a,
+  header>address{
+    display: flex;
+  }
+
+  header img{
+    align-self: center;
+    position: static;
+    transform: translateX(0);
+  }
+
+  header nav{
+    position: relative;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  header nav:before{
+    content: "";
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    left: 0;
+    background-color: var(--white);
+  }
+
+  header ul{
+    display: flex;
+    gap: 1em;
+    gap: clamp(0.8em, 0.5em + 0.98vw, 3em);
+    padding: 0 clamp(1.2em, 3.5vw, 120px);
+  }
+
+  header a{
+    transition: color 600ms linear;
+    position: relative;
+    cursor: pointer;
+  }
+
+  header nav a:hover{
+    color: var(--red);
+  }
+
+  header nav a:after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    height: 4px;
+    width: 0px;
+    transform: translateX(-50%);
+    background-color: var(--grey);
+    z-index: 10;
+    transition: width 600ms ease;
+  }
+
+  header nav a:hover:after{
+    width: 7em;
+  }
+
+  header address{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--red);
+    padding: 0 1.5em;
+  }
+}
+
+@media(min-width: 56em){
+  header{
+    font-size: 1em;
+    height: var(--bar-height-big);
+  }
+
+
+}
+
+@media(min-width: 82em){
+  header{
+    font-size: 1.375em;
+  }
+
+  header address{
+    gap: 26px;
+  }
+}
+
+@media(min-width: 100em){
+  header{
+    font-size: 1.5em;
+    height: var(--bar-height-bigger);
+  }
+}

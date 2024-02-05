@@ -1,0 +1,140 @@
+
+.introduction__background{
+  height: 100%;
+  width: 100%;
+  background-color: var(--black_op_35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction{
+  padding: 110px 28px;
+  text-align: center;
+}
+
+.introduction>h1{
+  font-size: 2em;
+  line-height: 105%;
+}
+
+.introduction>ul{
+  margin-top: 80px;
+  font-size: 1.125em;
+  font-weight: bolder;
+}
+
+.introduction>ul p{
+  line-height: 1.1em;
+}
+
+.introduction>a{
+  display: block;
+  margin: 26px auto 0;
+  padding: 0.9em;
+  font-size: 1.2em;
+  width: 76%;
+  background-color: var(--light-grey-20);
+  border: 2px solid var(--red);
+  border-radius: 10px;
+  transition: color, background-color 600ms ease;
+}
+
+.introduction>a:hover{
+  background-color: var(--light-grey);
+  color: var(--grey);
+  border: 2px solid var(--light-grey);
+}
+
+.introduction>a:active{
+  background-color: var(--black);
+}
+
+@media (min-width: 25em){
+  .introduction>ul{
+    margin-top: 110px;
+  }
+}
+
+@media (min-width: 32em){
+  .introduction>h1{
+    margin-top: 22vh;
+  }
+
+  .introduction>ul{
+    margin-top: 146px;
+    font-size: 1.3em;
+  }
+
+  .introduction__background{
+    align-items: start;
+  }
+
+  .introduction>a{
+    width: 50%;
+  }
+}
+
+
+@media (min-width: 56em){
+  .introduction>a{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    bottom: 8vh;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (min-width: 80em){
+  .introduction{
+    padding: 0;
+    font-size: 1.4rem;
+    width: 70%;
+  }
+
+  .introduction>h1{
+    line-height: 1.3em;
+    font-weight: normal;
+  }
+
+  .introduction>ul{
+    margin-top: 10rem;
+  }
+
+  .introduction li{
+    line-height: normal;
+    font-weight: normal;
+  }
+}
+
+
+@media (min-width: 100em){
+  .introduction>ul{
+    margin-top: 15rem;
+  }
+
+  .introduction>a{
+    width: 20%;
+  }
+}
+
+
+@media (max-height: 51em) and (max-width: 23.5em){
+  .introduction{
+    padding: 90px 22px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-height: 62em){
+  .introduction>ul{
+    margin-top: 90px;
+  }
+
+  .introduction > a{
+    padding: 0.6em;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,12 @@
+.gap{
+  display: inline;
+  flex: 0 0 var(--pseudo-size);
+  height: 11em;
+  background-color: var(--black);
+}
+
+.gap_pros{
+  background-color: var(--white);
+  height: 50vh;
+  max-height: 30rem;
+}

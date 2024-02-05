@@ -1,0 +1,117 @@
+form{
+  max-width: 100%;
+  padding: 0 14px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+form fieldset{
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  color: var(--black);
+  padding: 45px 18px 18px;
+  font-family: Ubuntu, sans-serif;
+}
+
+form fieldset>legend{
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  padding: 8px 14px;
+  color: inherit;
+}
+
+.input-area{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-area>div{
+  position: relative;
+}
+
+.input-area button{
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.125em;
+  transition: all 600ms ease;
+}
+
+.input-area button:hover{
+  background-color: var(--light-grey);
+  color: var(--grey);
+}
+
+.input-area button:active{
+  background-color: var(--grey);
+  color: var(--red);
+}
+
+form input:focus:valid,
+.form-valid{
+  border: 2px solid var(--green);
+  outline: 1px solid var(--green);
+}
+
+form input:focus:invalid,
+.form-invalid{
+  border: 2px solid var(--red);
+  outline: 1px solid var(--red);
+}
+
+form input~span{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+form input:focus:valid~span:after,
+.form-valid~span:after{
+  position: absolute;
+  content: "\2714";
+  color: var(--green);
+  font-size: 1.5rem;
+  right: 0.5rem;
+  transform: translateY(-50%);
+}
+
+form input:focus:invalid~span:after,
+.form-invalid~span:after{
+  position: absolute;
+  content: "\2716";
+  color: var(--red);
+  font-size: 1.5rem;
+  right: 0.5rem;
+  transform: translateY(-50%);
+}
+
+form input:disabled,
+form button:disabled{
+  background-color: var(--light-grey);
+}
+
+form button:disabled:hover,
+form button:disabled:focus{
+  color: var(--white);
+}
+
+@media (min-width: 32em){
+  form{
+    width: 90vw;
+    padding: 0;
+  }
+}
+
+@media (min-width: 52em){
+  form{
+    width: 70vw;
+  }
+}
+
+@media (min-width: 80em){
+  form{
+    width: 50vw;
+  }
+}

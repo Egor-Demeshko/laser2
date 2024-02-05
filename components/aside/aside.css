@@ -1,0 +1,123 @@
+aside{
+  display: none;
+}
+
+@media(min-width: 52em){
+  aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 120px;
+    height: 32rem;
+    background: var(--grey);
+    right: -125px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px 0 0 10px;
+  }
+
+  aside svg{
+    max-width: 82px;
+    max-height: 82px;
+    
+  }
+
+  aside a svg{
+    transition: color 600ms ease;
+    animation: 600ms ease forwards scaleReturn;
+  }
+
+  aside a:hover svg{
+    animation: 600ms ease forwards scaleChange;
+  }
+
+  aside a:hover svg[class=telegram]{
+    color: var(--telegram);
+  }
+
+  aside a:hover svg[class=viber]{
+    color: var(--viber);
+  }
+
+  aside a:hover svg[class=whatsapp]{
+    color: var(--whatsapp);
+  }
+
+  aside .instagram{
+    position: relative;
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .instagram__ordinary,
+  .instagram__gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .instagram__ordinary{
+    z-index: 6;
+  }
+
+  .instagram__ordinary{
+    transition: color 600ms ease;
+    z-index: 5;
+  }
+
+  aside a:hover .instagram__ordinary{
+    color: transparent;
+  }
+
+  aside.show{
+    animation: 600ms ease-out forwards showAside;
+  }
+
+  aside.close{
+    animation: 600ms ease-in forwards hideAside;
+  }
+}
+
+@keyframes showAside {
+  0%{
+    right: -125px;
+  }
+
+  100%{
+    right: 0;
+  }
+}
+
+@keyframes hideAside{
+  0%{
+    right: 0;
+  }
+
+  100%{
+    right: -125px;
+  }
+}
+
+@keyframes scaleChange {
+  0%{
+    transform: scale(100%);
+  }
+  
+  100%{
+    transform: scale(110%);
+  }
+}
+
+@keyframes scaleReturn{
+  0%{
+    transform: scale(110%);
+  }
+
+  100%{
+    transform: scale(100%);
+  }
+}

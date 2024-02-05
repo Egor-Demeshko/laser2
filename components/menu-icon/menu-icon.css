@@ -1,0 +1,105 @@
+summary::marker{
+  content: none;
+}
+
+.socials{
+  margin: 3em auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.socials svg{
+  width: 1.8em;
+  height: 1.8em;
+  color: var(--light-grey);
+}
+
+summary{
+  position: fixed;
+  top: 24px;
+  right: 16px;
+  width: 70px;
+  height: 42px;
+  text-align: center;
+  z-index: 9;
+}
+
+details svg{
+  color: var(--red);
+}
+
+details[open] #menu_svg{
+  display: none;
+}
+
+details[open] #cancel_svg{
+  display: block;
+}
+
+details[open]{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+details #cancel_svg{
+  display: none;
+}
+
+details nav{
+  font-family: Ubuntu, sans-serif;
+  background: var(--grey);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+details[open] nav{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 1s ease forwards drop;
+  z-index: 1;
+}
+
+details ul{
+  display: grid;
+  grid: repeat(5, 1fr) / 100%;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 60vh;
+}
+
+details li{
+  font-size: 2em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+
+@keyframes drop{
+  0%{
+    opacity: 0;
+    height: 0%;
+  }
+
+  100%{
+    opacity: 1;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 32em){
+  details, summary{
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+:root{
+  /*color constants*/
+  --top-gradient: linear-gradient(to bottom, #871C1CB3, #F9F9F900);
+  --bottom-gradient: linear-gradient(to bottom, #00000000, #000000);
+
+  --red: #D90505;
+  --white: #FFFFFF;
+  --black: #1F1E1E;
+  --black_op_35: #0000007a;
+  --grey: #605A5A;
+  --light-grey: #CCCBCB;
+  --light-grey-20: #CCCBCB40;
+  --green: #3E8507;
+  --blue: #0088CC;
+  --purple: #59267c;
+  --green-lighter: #25d366;
+
+
+
+  /*shadows*/
+  --main-shadow: #000000A1;
+
+
+
+  /*general constants*/
+  --bar-height: 90px;
+  --bar-height-big: 110px;
+  --bar-height-bigger: 140px;
+  --text-padding: 15.6vw;
+  --pseudo-size: 8px;
+  --gallery-pseudo: var(--pseudo-size) + 12px;
+  --main-top-spacing: 8.5em;
+  --price-padding: 1em 1.9em;
+
+  /*breakpoints*/
+  --mobile: 32em;
+  --desktop: 56em;
+  --desktop1: 80em;
+
+
+  /*icons*/
+  --telegram: var(--blue);
+  --viber: var(--purple);
+  --whatsapp: var(--green-lighter);
+}

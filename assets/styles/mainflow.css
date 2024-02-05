@@ -1,0 +1,7 @@
+
+
+@media (min-width: 32em){
+  main>div:nth-child(2){
+    padding: 0;
+  }
+}

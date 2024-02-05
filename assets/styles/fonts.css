@@ -1,0 +1,13 @@
+@font-face{
+  font-family: "Ubuntu";
+  src: local("Ubuntu"),
+       url("/assets/fonts/Ubuntu.ttf");
+  font-display: swap;     
+}
+
+@font-face{
+  font-family: "LexendDeca";
+  src: local("LexendDeca"),
+       url("/assets/fonts/LexendDeca.ttf");
+  font-display: swap;     
+}

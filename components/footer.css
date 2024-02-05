@@ -1,0 +1,59 @@
+footer{
+  padding: 0 14px var(--bar-height);
+  width: 100%;
+}
+
+footer>div{
+  background-color: var(--black);
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+footer p{
+  font-size: 0.88em;
+}
+
+.developer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.9rem;
+  color: var(--grey);
+  transition: color 600ms ease;
+  cursor: pointer;
+}
+
+
+.developer:hover{
+  color: var(--red);
+}
+
+.developer span{
+  font-size: 1.2em;
+}
+
+
+@media(min-width: 32em){
+  footer{
+    padding: 0;
+  }
+
+  footer>div{
+    border-radius: 0;
+    position: relative;
+  }
+
+  .developer{
+    position: absolute;
+    bottom: 50%;
+    right: 2rem;
+    transform: translateY(50%);
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .developer span:last-child{
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,38 @@
+.address{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: var(--white);
+}
+
+.address>div{
+  flex: 1;
+  padding: var(--price-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  border-radius: 10px 0 0;
+}
+
+.address>p{
+  flex: 2;
+  padding: var(--price-padding);
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 0 0;
+}
+
+.address svg{
+  width: 2.875em;
+  height: 3.5em;
+}
+
+@media (max-width: 32em){
+  .address svg{
+    width: 1.5em;
+    height: 1.7em;
+  }
+}

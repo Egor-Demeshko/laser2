@@ -1,0 +1,30 @@
+.goUp{
+  display: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: 0 0 4px var(--main-shadow);
+  padding: 24px 14px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  position: fixed;
+  bottom: 110px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.stop-scroll{
+  bottom: 400px;
+}
+
+@media (min-width: 32em){
+  .goUp{
+    bottom: 50px;
+    right: 70px;
+  }
+
+  .stop-scroll{
+    bottom: 140px;
+  }
+}

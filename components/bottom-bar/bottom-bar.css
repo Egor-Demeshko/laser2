@@ -1,0 +1,38 @@
+.bottom-bar{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: var(--bottom-gradient);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: var(--bar-height);
+  align-items: center;
+  align-content: center;
+  /* padding: 27px 0; */
+  z-index: 8;
+}
+
+.bottom-bar a{
+  height: 50px;
+}
+
+.bottom-bar span{
+  font-family: Ubuntu, sans-serif;
+  text-align: center;
+  font-size: 56px;
+  font-weight: bold;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar svg:nth-child(2), .bottom-bar svg:first-child{
+  border-right: solid var(--white) 2px;
+}
+
+@media (min-width: 32em){
+  .bottom-bar{
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.copy{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.125em;
+  color: var(--white);
+  background-color: var(--black);
+  border-top: 4px solid var(--red);
+  transition: all ease 600ms;
+  padding: var(--price-padding);
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+.copy:hover{
+  color: var(--grey);
+  background-color: var(--light-grey);
+  border-top: 4px solid var(--light-grey);
+}
+
+.copy:active{
+  color: var(--white);
+  background-color: var(--red);
+  border-top: 4px solid var(--red);
+}

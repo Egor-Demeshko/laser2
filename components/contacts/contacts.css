@@ -1,0 +1,101 @@
+.contacts{
+  display: block;
+  width: 100%;
+  padding: 2.6em 0;
+  color: var(--white);
+}
+
+.contacts>ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.6em;
+}
+
+.contacts>ul li{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: LexendDeca, Ubuntu, sans-serif;
+}
+
+.contacts .contacts_li_column{
+  flex-direction: column;
+}
+
+.contacts li>a{
+  background: var(--red);
+  flex: 1;
+  padding: var(--price-padding);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 600ms;
+}
+
+.contacts li>a>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts li>a:hover{
+  background-color: var(--light-grey);
+  color: var(--grey);
+}
+
+.contacts li>p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  background: var(--black);
+  flex: 2;
+  padding: 1em 1.9em;
+  border-radius: 0 10px 10px 0;
+}
+
+.contacts svg{
+   height: 2.625em;
+   width: 2.625em;
+}
+
+@media (max-width: 32em){
+  .contacts li>p{
+    border-radius: 0 10px 10px 0;
+    padding: 0.8em;
+  }
+
+  .contacts .contacts_mail{
+    display: none;
+  }
+
+  .contacts .contacts_mail~p{
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 32em){
+  .contacts{
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .contacts .copy{
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 52em){
+  .contacts{
+    width: 70vw;
+  }
+}
+
+@media (min-width: 80em){
+  .contacts{
+    width: 50vw;
+  }
+}

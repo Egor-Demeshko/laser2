@@ -1,0 +1,84 @@
+.prices{
+  display: block;
+  width: 100%;
+  padding: 2.6em 0;
+  color: var(--white);
+  line-height: 1.15;
+}
+
+#prices h2{
+  padding: 1em;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  font-size: 1.75rem;
+  font-size: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.prices>ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.65em;
+}
+
+.prices>ul li{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: LexendDeca, Ubuntu, sans-serif;
+}
+
+.prices li>div{
+  background: var(--red);
+  flex: 1;
+  padding: 1.5em 1.9em;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prices li>p{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  flex: 2;
+  padding: 1.5em 1.9em;
+  border-radius: 0 10px 10px 0;
+}
+
+.prices .prices__border-radius{
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-size: clamp(1.17rem, calc(1.19rem + 0.22vw), 1.3rem);
+  margin-top: 1.375rem;
+}
+
+.prices span{
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 0.44px;
+}
+
+.prices .prices_note{
+  position: relative;
+  top: -1rem;
+  border-radius: 10px 0 0 10px;
+}
+
+.prices li.prices_note>p{
+  border-radius: 10px 10px 10px 10px;
+}
+
+@media (min-width: 32em){
+  .prices{
+    margin: 0 auto;
+  }
+}
+

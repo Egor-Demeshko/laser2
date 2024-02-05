@@ -1,0 +1,50 @@
+.error-message{
+    font-family: Ubuntu, sans-serif;
+    padding: 1.125rem 1.5rem;
+    position: absolute;
+    left: 50%;    
+    bottom: 35%;
+    width: 24rem;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    border: 3px solid var(--green);
+  }
+
+
+  .error-message_show{
+    animation: showMessage normal 800ms forwards ease-out;
+  }
+
+
+  .error-message_hide{
+    animation: hideMessage normal 800ms forwards ease-in;
+  }
+
+
+  .error-message__title{
+    margin: 0;
+  }
+
+
+@keyframes showMessage {
+  from{
+    transform: translateX(-450%);
+  /* opacity: 0; */
+  }
+
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes hideMessage{
+  from{
+    ltransform: translateX(-50%);
+  }
+
+  to{
+    transform: translateX(-450%);
+  }
+}
