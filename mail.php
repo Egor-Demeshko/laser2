@@ -26,7 +26,7 @@ $email = $_POST["email"];
 $phone = $_POST["phone"];
 $request = $_POST["request"];
 
-$email_template = get_theme_root_uri() . "/laser/components/templates/mail.html";
+$email_template = "wp-content/themes/laser/components/templates/mail.html";
 $body = file_get_contents($email_template);
 
 
@@ -43,26 +43,27 @@ $mail->isSMTP();
 //SMTP::DEBUG_SERVER = client and server messages
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 //Set the hostname of the mail server
-$mail->Host = 'mailbe02.hoster.by';
+$mail->Host = 'mailbe01.hoster.by';
 //Set the SMTP port number - likely to be 25, 465 or 587
 $mail->Port = 465;
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 //Username to use for SMTP authentication
-$mail->Username = 'mail@rustycage.by';
+$mail->Username = 'mail@lazerfox.by';
 //Password to use for SMTP authentication
-$mail->Password = 'CYT__2yyy6';
+$mail->Password = 'H(G7i$qOyFL(rbJ51!';
 //Set who the message is to be sent from
-$mail->setFrom('mail@rustycage.by');
-$mail->addAddress('Bks2000@mail.ru');
+$mail->setFrom('mail@lazerfox.by');
+$mail->addAddress('vlasiuk1985@gmail.com');
 //Set the subject line
-$mail->Subject = "[Заявка с формы RUSTYCAGE]";
+$mail->Subject = "[Заявка с формы LAZERFOX]";
 $mail->MsgHTML($body);
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.png');
 
 //send the message, check for errors
 if (!$mail->send()) {
+
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message sent!';
